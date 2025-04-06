@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blogapp2',  # Make sure this line exists
+    'blogapp2',
+    'blogapp2/templates/blogapp2',# Make sure this line exists
 ]
 
 MIDDLEWARE = [
