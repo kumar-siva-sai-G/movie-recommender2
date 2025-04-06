@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('blogapp2/', include('blogapp2.urls')),  # Include your app's URLs
 ]
