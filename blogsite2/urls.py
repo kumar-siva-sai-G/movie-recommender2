@@ -16,11 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import TemplateView
-import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('blogapp2/', include('blogapp2.urls')),  # Include your app's URLs
 ]
