@@ -85,5 +85,5 @@ def recommend_view(request):
     if request.method == 'POST':
         movie_name = request.POST.get('movie_name')
         error, recommendations = recommend_movies(movie_name)
-        return render(request, 'blogapp2/recommend.html', {'recommendations': recommendations, 'error': error, 'searched_movie': movie_name})
-    return render(request, 'blogapp2/recommend.html')
+        return render(request, 'blogapp2/index.html', {'recommendations': recommendations, 'error': error, 'searched_movie': movie_name})
+    return render(request, 'blogapp2/index.html')
